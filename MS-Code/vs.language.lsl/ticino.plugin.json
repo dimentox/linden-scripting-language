@@ -1,0 +1,18 @@
+{
+	"pluginId": "vs.language.lsl",
+	"activationEvents": ["textModel:lsl"],
+	"mainModule": "./lslMain",
+	"contributes": {
+		"language": [{
+			"id": "lsl",
+			"extensions": [ ".lsl" ]
+		}]
+	},
+	"scripts": {
+		"compile": "node ../../node_modules/gulp/bin/gulp.js --gulpfile ../gulpfile.js compile --dir vs.language.lsl"
+	},
+
+	"_bundling": [
+		{ "name": "./lslMain" }
+	]
+}
